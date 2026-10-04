@@ -1,0 +1,771 @@
+css * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe4ec, #fff5f8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5a3545;
+}
+
+.page {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 50px 30px;
+}
+
+.envelope {
+    font-size: 80px;
+    margin-bottom: 25px;
+    animation: floating 2s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 42px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.message {
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.open-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #d96b8a;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.open-button:hover {
+    background: #b94d6d;
+    transform: scale(1.05);
+}
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .subtitle {
+        font-size: 17px;
+    }
+
+    .envelope {
+        font-size: 65px;
+    }
+}
+
+.lock {
+    font-size: 75px;
+    margin-bottom: 25px;
+    animation: floating 2s ease-in-out infinite;
+}
+
+.code-box {
+    margin-top: 30px;
+}
+
+.code-box input {
+    width: 100%;
+    max-width: 350px;
+    padding: 15px 20px;
+    border: 2px solid #e5a6b8;
+    border-radius: 30px;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    background: white;
+}
+
+.code-box input:focus {
+    border-color: #d96b8a;
+}
+
+.code-box button {
+    display: block;
+    margin: 20px auto;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #d96b8a;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.code-box button:hover {
+    background: #b94d6d;
+    transform: scale(1.05);
+}
+
+#errorMessage {
+    color: #c94b6b;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.special-page {
+    max-width: 700px;
+}
+
+.heart {
+    font-size: 85px;
+    margin-bottom: 20px;
+    animation: heartBeat 1.5s infinite;
+}
+
+.special-page h1 {
+    font-size: 45px;
+    line-height: 1.15;
+    margin-bottom: 30px;
+}
+
+.special-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.special-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 18px 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.special-item:hover {
+    transform: translateY(-5px);
+}
+
+.special-item span {
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+.special-item p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.special-ending {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+@keyframes heartBeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.15);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .special-page h1 {
+        font-size: 34px;
+    }
+
+    .special-item {
+        padding: 15px;
+    }
+
+    .special-item span {
+        font-size: 25px;
+    }
+
+    .special-item p {
+        font-size: 14px;
+    }
+
+}
+
+.message-page {
+    max-width: 700px;
+}
+
+.flower {
+    font-size: 80px;
+    margin-bottom: 15px;
+    animation: flowerFloat 3s ease-in-out infinite;
+}
+
+.message-page h1 {
+    font-size: 45px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.letter {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 25px;
+    text-align: left;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    margin-bottom: 25px;
+}
+
+.letter p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.letter p:last-child {
+    margin-bottom: 0;
+}
+
+.signature {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.message-page .open-button {
+    margin-top: 5px;
+}
+
+@keyframes flowerFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(3deg);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .flower {
+        font-size: 65px;
+    }
+
+    .message-page h1 {
+        font-size: 34px;
+    }
+
+    .letter {
+        padding: 22px;
+    }
+
+    .letter p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+}
+
+
+.wish-page {
+    min-height: 100vh;
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.stars {
+    font-size: 70px;
+    margin-bottom: 10px;
+
+    animation: starGlow 2s ease-in-out infinite;
+}
+
+.wish-page h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.birthday-cake {
+    margin: 15px 0 25px;
+}
+
+.candles {
+    font-size: 35px;
+    letter-spacing: 15px;
+    margin-bottom: -5px;
+
+    animation: candleMove 1.5s ease-in-out infinite;
+}
+
+.cake-body {
+    font-size: 110px;
+
+    animation: cakeFloat 2s ease-in-out infinite;
+}
+
+.wish-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.wish-button {
+    margin-top: 25px;
+
+    padding: 15px 32px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #d96b8a;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.wish-button:hover {
+    background: #b94d6d;
+    transform: scale(1.05);
+}
+
+.wish-button:disabled {
+    cursor: default;
+    transform: none;
+}
+
+
+.final-message {
+    display: none;
+
+    margin-top: 30px;
+
+    padding: 30px;
+
+    max-width: 550px;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    animation: finalAppear 1s ease;
+}
+
+.final-message.show {
+    display: block;
+}
+
+.final-heart {
+    font-size: 55px;
+
+    animation: heartBeat 1.5s infinite;
+}
+
+.final-message h2 {
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin: 10px 0 15px;
+}
+
+.final-message p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.final-emojis {
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+
+/* Final confetti */
+
+.final-confetti {
+    position: fixed;
+
+    top: -50px;
+
+    font-size: 28px;
+
+    pointer-events: none;
+
+    animation: finalFall 5s linear forwards;
+}
+
+
+
+
+@keyframes starGlow {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+
+}
+
+@keyframes candleMove {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+}
+
+@keyframes cakeFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+@keyframes finalAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+@keyframes finalFall {
+
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+
+
+
+@media (max-width: 600px) {
+
+    .stars {
+        font-size: 55px;
+    }
+
+    .wish-page h1 {
+        font-size: 38px;
+    }
+
+    .cake-body {
+        font-size: 85px;
+    }
+
+    .candles {
+        font-size: 28px;
+        letter-spacing: 8px;
+    }
+
+    .wish-text {
+        font-size: 15px;
+    }
+
+    .final-message {
+        padding: 22px;
+    }
+
+}
+
+
+body {
+    overflow-x: hidden;
+    position: relative;
+
+    background:
+        radial-gradient(circle at 20% 20%,
+            rgba(255, 255, 255, 0.8),
+            transparent 30%),
+        radial-gradient(circle at 80% 80%,
+            rgba(255, 220, 230, 0.7),
+            transparent 35%),
+        linear-gradient(135deg,
+            #ffe4ec,
+            #fff5f8,
+            #ffe9f0);
+
+    background-size: 150% 150%;
+
+    animation: backgroundMove 12s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundMove {
+
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+
+}
+
+
+/* =================================
+   PAGE FADE IN
+   ================================= */
+
+.page,
+.wish-page {
+    animation: pageAppear 1.2s ease;
+}
+
+@keyframes pageAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* =================================
+   PAGE 3 - PERSONAL MESSAGE
+   ================================= */
+
+.birthday-name {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.special-for {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.birthday-message {
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 12px auto;
+}
+
+.birthday-page .open-button {
+    margin-top: 25px;
+}
+
+
+/* =================================
+   MOBILE
+   ================================= */
+
+@media (max-width: 600px) {
+
+    .birthday-name {
+        font-size: 20px;
+    }
+
+    .special-for {
+        font-size: 16px;
+    }
+
+    .birthday-message {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+}
+
+/* =================================
+   FALLING LOVE - STRAIGHT DOWN
+   ================================= */
+
+.falling-heart {
+    position: fixed;
+
+    top: -50px;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    opacity: 0;
+
+    animation-name: heartFallStraight;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+    will-change: transform, opacity;
+}
+
+
+/* Love bergerak LURUS ke bawah */
+
+@keyframes heartFallStraight {
+
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.65;
+    }
+
+    90% {
+        opacity: 0.65;
+    }
+
+    100% {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+
+}
+
+/* =================================
+   BACKGROUND MUSIC BUTTON
+   ================================= */
+
+.music-button {
+
+    position: fixed;
+
+    bottom: 25px;
+    right: 25px;
+
+    z-index: 999;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    color: #5a3545;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.music-button:hover {
+
+    transform: scale(1.05);
+
+    background:
+        rgba(255, 255, 255, 0.95);
+
+}

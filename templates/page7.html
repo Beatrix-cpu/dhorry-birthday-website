@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Make a Wish 🎂</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="wish-page">
+
+        <div class="stars">
+            ✨
+        </div>
+
+        <p class="small-title">
+            ONE LAST THING...
+        </p>
+
+        <h1>
+            MAKE A<br>
+            WISH 🎂
+        </h1>
+
+        <div class="birthday-cake">
+
+            <div class="candles">
+                <span>🕯️</span>
+                <span>🕯️</span>
+                <span>🕯️</span>
+            </div>
+
+            <div class="cake-body">
+                🎂
+            </div>
+
+        </div>
+
+        <p class="wish-text">
+            tutp matanyaaa...
+        </p>
+
+        <p class="wish-text">
+            nahh skrngg berdoaa duluuu (jngn lupa doanya selipin nama adekk). 💕
+        </p>
+        <p>kalau doanya dah siapp, clik di bawah nihh</p>
+
+        <button class="wish-button" onclick="makeWish()">
+            I MADE MY WISH ✨
+        </button>
+
+        <div id="finalMessage" class="final-message">
+
+            <div class="final-heart">
+                💕
+            </div>
+
+            <h2>
+                HAPPY BIRTHDAY!
+            </h2>
+
+            <p>
+                May all your wishes come true,
+                today and always. 🌸
+            </p>
+
+            <p>
+                You deserve a life full of
+                happiness, love, and beautiful moments.
+            </p>
+
+            <div class="final-emojis">
+                🎉 🎂 🎈 💕 ✨ 🌸
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function makeWish() {
+
+            const message = document.getElementById("finalMessage");
+            const button = document.querySelector(".wish-button");
+
+            message.classList.add("show");
+
+            button.innerText = "WISH GRANTED 💕";
+
+            button.disabled = true;
+
+            createConfetti();
+
+        }
+
+
+        function createConfetti() {
+
+            const emojis = ["🎉", "💕", "✨", "🎈", "🌸", "🎂"];
+
+            for (let i = 0; i < 30; i++) {
+
+                const confetti = document.createElement("div");
+
+                confetti.className = "final-confetti";
+
+                confetti.innerText =
+                    emojis[Math.floor(Math.random() * emojis.length)];
+
+                confetti.style.left =
+                    Math.random() * 100 + "%";
+
+                confetti.style.animationDelay =
+                    Math.random() * 2 + "s";
+
+                document.body.appendChild(confetti);
+
+                setTimeout(() => {
+                    confetti.remove();
+                }, 5000);
+            }
+
+        }
+
+    </script>
+    <script src="{{ url_for('static', filename='effects.js') }}"></script>
+    <script src="{{ url_for('static', filename='music.js') }}"></script>
+</body>
+
+</html>

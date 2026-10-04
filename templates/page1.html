@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Sweet Surprise 💌</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="envelope">💌</div>
+
+        <h1>A SWEET SURPRISE FOR MY BOYFRIEND</h1>
+
+        <p class="subtitle">
+            i have special gift for you, i hope u like it.
+        </p>
+
+        <p class="message">
+            Are you ready to discover something special? 💕
+        </p>
+
+        <a href="{{ url_for('secret') }}" class="open-button">
+            OPEN THE SURPRISE 💌
+        </a>
+
+    </div>
+    <script src="{{ url_for('static', filename='effects.js') }}"></script>
+    <audio id="backgroundMusic" loop autoplay>
+        <source src="{{ url_for('static', filename='birthday.mp3') }}" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const music = document.getElementById("backgroundMusic");
+
+        music.volume = 0.35;
+
+        music.play().catch(function (error) {
+            console.log("Autoplay diblokir browser:", error);
+        });
+    </script>
+
+    <script src="{{ url_for('static', filename='music.js') }}"></script>
+
+</body>
+
+</html>

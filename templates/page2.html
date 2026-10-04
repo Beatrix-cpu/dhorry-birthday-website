@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enter the Secret Code 🔐</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="lock">🔐</div>
+
+        <h1>ENTER THE<br>SECRET CODE</h1>
+
+        <p class="subtitle">
+            Only someone special knows the secret... 💕
+        </p>
+
+        <div class="code-box">
+
+            <input type="password" id="secretCode" placeholder="Enter secret code" maxlength="20">
+
+            <button onclick="checkCode()">
+                UNLOCK 💗
+            </button>
+
+            <p id="errorMessage"></p>
+
+        </div>
+
+    </div>
+
+    <script>
+        function checkCode() {
+
+            const code =
+                document.getElementById("secretCode").value;
+
+            const errorMessage =
+                document.getElementById("errorMessage");
+
+            const correctCode = "262626";
+
+            if (code === correctCode) {
+
+                window.location.href = "/birthday";
+
+            } else {
+
+                errorMessage.innerText =
+                    "Oops! That's not the secret code 💔";
+
+            }
+        }
+    </script>
+    <script src="{{ url_for('static', filename='effects.js') }}"></script>
+    <script src="{{ url_for('static', filename='music.js') }}"></script>
+</body>
+
+</html>

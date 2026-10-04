@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday 🎂</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+
+
+    <div class="page birthday-page">
+
+        <div class="cake">
+            🎂
+        </div>
+
+        <p class="small-title">
+            TODAY IS YOUR SPECIAL DAY
+        </p>
+
+        <h1 class="birthday-title">
+            HAPPY<br>
+            BIRTHDAY! 🎉
+        </h1>
+
+        <p class="birthday-name">
+            Sayang akuu, cintakuu, gantengkuuu,<br>
+            abaaangg dhoryy 💕
+        </p>
+
+        <p class="special-for">
+            Untukk kesayangan akuu yang palingg special 💕
+        </p>
+
+        <p class="birthday-message">
+            May your birthday be filled with happiness,
+            laughter, love, and beautiful moments,
+            dan yang paling utama semogaa anak sulung ini bisa sukses
+            dan jadi laki-laki kebanggaan mama sama adikk kecil,
+            sama jadi kebanggaan akuu.
+        </p>
+
+        <p class="birthday-message">
+            You deserve all the wonderful things
+            life has to offer. 🌸
+        </p>
+
+        <a href="{{ url_for('special') }}" class="open-button">
+            💕 WHY YOU ARE SPECIAL
+        </a>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='effects.js') }}"></script>
+    <script src="{{ url_for('static', filename='music.js') }}"></script>
+</body>
+
+</html>
