@@ -1,19 +1,22 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    
     <title>Happy Birthday 🎂</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="static/style.css">
+    
+
 </head>
 
 <body>
 
-
-
+    
     <div class="page birthday-page">
 
         <div class="cake">
@@ -51,14 +54,16 @@
             life has to offer. 🌸
         </p>
 
-        <a href="{{ url_for('special') }}" class="open-button">
+        <a href="page5.html" class="open-button">
             💕 WHY YOU ARE SPECIAL
         </a>
 
     </div>
 
-    <script src="{{ url_for('static', filename='effects.js') }}"></script>
-    <script src="{{ url_for('static', filename='music.js') }}"></script>
+    <script src="static/effects.js"></script>
+    <script src="static/music.js"></script>
+    
+
 </body>
 
 </html>

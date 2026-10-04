@@ -446,7 +446,7 @@ h1 {
 }
 
 
-/* Final confetti */
+
 
 .final-confetti {
     position: fixed;
@@ -599,9 +599,7 @@ body {
 }
 
 
-/* =================================
-   PAGE FADE IN
-   ================================= */
+
 
 .page,
 .wish-page {
@@ -652,9 +650,6 @@ body {
 }
 
 
-/* =================================
-   MOBILE
-   ================================= */
 
 @media (max-width: 600px) {
 
@@ -673,9 +668,7 @@ body {
 
 }
 
-/* =================================
-   FALLING LOVE - STRAIGHT DOWN
-   ================================= */
+
 
 .falling-heart {
     position: fixed;
@@ -696,7 +689,7 @@ body {
 }
 
 
-/* Love bergerak LURUS ke bawah */
+
 
 @keyframes heartFallStraight {
 
@@ -719,47 +712,6 @@ body {
     }
 
 }
-
-/* =================================
-   BACKGROUND MUSIC BUTTON
-   ================================= */
-
-.music-button {
-
-    position: fixed;
-
-    bottom: 25px;
-    right: 25px;
-
-    z-index: 999;
-
-    padding: 12px 20px;
-
-    border: none;
-
-    border-radius: 30px;
-
-    background: rgba(255, 255, 255, 0.75);
-
-    color: #5a3545;
-
-    font-size: 13px;
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-    backdrop-filter: blur(10px);
-
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.08);
-
-    transition:
-        transform 0.3s ease,
-        background 0.3s ease;
-
-}
-
 
 .music-button:hover {
 
